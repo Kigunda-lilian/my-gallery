@@ -30,7 +30,7 @@ Postgressql
 
 
 ## Installing
-###STARTING UP A DJANGO PROJECT
+### STARTING UP A DJANGO PROJECT
  python3 -m venv virtual
  source virtual/bin/activate
  pip install django==3.2.10 or pip install django==4.0.2 or  pip install django
