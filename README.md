@@ -1,4 +1,4 @@
-My gallery - A Django based personal gallery , 25/02/2022.
+# My gallery - A Django based personal gallery , 25/02/2022.
 * By Lilian Kanana.
 
 
