@@ -47,3 +47,13 @@ class locationTestCase(TestCase):
         locations = location.objects.all()
         self.assertTrue(len(locations)>0)
 
+
+class GalleryTestCase(TestCase):
+    def setUp(self):
+        self.Nash = Image(name = 'Nash', description = 'Happy soul')
+        self.Nash.save_image()
+        
+    def test_instance(self):
+        self.assertTrue(isinstance(self.Nash, Image))
+
+
