@@ -12,3 +12,7 @@ def photo_description(request):
 
 def search_results(request):
    return HttpResponse('This is my where the searched categories will be displayed')
+
+def profile(request):
+       return HttpResponse('This is my where the searched categories will be displayed')
+
