@@ -8,7 +8,15 @@ class categories(models.Model):
             return self.name
         
 class location(models.Model):
-    name = models.CharField(max_length=30)
+    name = models.CharField(max_length=46)
 
     def __str__(self):
         return self.name
+    
+class Gallery(models.Model):
+    image = models.ImageField(upload_to = 'photos/', null = True, blank = True)
+    name = models.CharField(max_length=46)
+    descripton = models.TextField()
+    location = models.ForeignKey('location',on_delete=models.CASCADE)
+    category = models.ForeignKey('categories',on_delete=models.CASCADE)
+    time_uloaded = models.DateTimeField(auto_now_add=True, null=True)   
