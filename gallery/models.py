@@ -37,4 +37,13 @@ class Gallery(models.Model):
     descripton = models.TextField()
     location = models.ForeignKey('location',on_delete=models.CASCADE)
     category = models.ForeignKey('categories',on_delete=models.CASCADE)
-    time_uploaded = models.DateTimeField(auto_now_add=True, null=True)   
+    time_uploaded = models.DateTimeField(auto_now_add=True, null=True)
+    
+    def save_image(self):
+            self.save()
+    
+    def update_image(self):
+        self.save()
+
+    def delete_image(self):
+        self.delete()   
