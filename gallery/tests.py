@@ -55,5 +55,20 @@ class GalleryTestCase(TestCase):
         
     def test_instance(self):
         self.assertTrue(isinstance(self.Nash, Image))
+        
+    def test_save_method(self):
+        self.Nash.save_image()
+        images = Image.objects.all()
+        self.assertTrue(len(images)>0)
+        
+    def test_delete_method(self):
+        self.Nash.delete_image()
+        images = Image.objects.all()
+        self.assertTrue(len(images)>0)
+        
+    def test_update_method(self):
+        self.Nash.update_image()
+        images = Image.objects.all()
+        self.assertTrue(len(images)>0)
 
 
