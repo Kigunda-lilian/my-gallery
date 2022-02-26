@@ -4,7 +4,7 @@ from .models import categories,location,Gallery
 # Create your tests here.
 class categoriesTestCase(TestCase):
     def setUp(self):
-        self.fashion = categories(name = 'fashion')
+        self.fashion = categories(categories_name = 'fashion')
         
     def test_instance(self):
         self.assertTrue(isinstance(self.fashion, categories))
@@ -27,7 +27,7 @@ class categoriesTestCase(TestCase):
         
 class locationTestCase(TestCase):
     def setup(self):
-        self.Kenya = location(name = 'Kenya')
+        self.Kenya = location(location_name = 'Kenya')
 
     def test_instance(self):
         self.assertTrue(isinstance(self.Kenya,location))
@@ -50,7 +50,7 @@ class locationTestCase(TestCase):
 
 class GalleryTestCase(TestCase):
     def setUp(self):
-        self.Nash = Image(name = 'Nash', description = 'Happy soul')
+        self.Nash = Image(Gallery_name = 'Nash', Gallery_description = 'Happy soul')
         self.Nash.save_image()
         
     def test_instance(self):
