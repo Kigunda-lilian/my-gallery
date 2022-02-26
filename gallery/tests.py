@@ -31,4 +31,19 @@ class locationTestCase(TestCase):
 
     def test_instance(self):
         self.assertTrue(isinstance(self.Kenya,location))
+        
+    def test_save_method(self):
+        self.Kenya.save_location()
+        locations = location.objects.all()
+        self.assertTrue(len(locations)>0)
+        
+    def test_delete_method(self):
+        self.Kenya.delete_location()
+        locations = location.objects.all()
+        self.assertTrue(len(locations)>0)
+        
+    def test_update_method(self):
+        self.Kenya.update_location()
+        locations = location.objects.all()
+        self.assertTrue(len(locations)>0)
 
