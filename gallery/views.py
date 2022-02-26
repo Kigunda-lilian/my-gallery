@@ -4,7 +4,7 @@ from django.http  import HttpResponse
 # Create your views here.
 def all_photos(request):
    
-    return HttpResponse('This is my where all my images will be displayed. also the homepage')
+    return render(request,'index.html')
 
 def photo_description(request):
     
@@ -14,5 +14,5 @@ def search_results(request):
    return HttpResponse('This is my where the searched categories will be displayed')
 
 def profile(request):
-       return HttpResponse('This is my where the searched categories will be displayed')
+       return HttpResponse('This is my profile page')
 
