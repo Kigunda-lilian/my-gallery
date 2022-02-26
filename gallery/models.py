@@ -7,6 +7,15 @@ class categories(models.Model):
     def __str__(self):
             return self.name
         
+    def save_category(self):
+        self.save()
+
+    def update_category(self):
+        self.update()
+
+    def delete_category(self):
+        self.delete()    
+        
 class location(models.Model):
     name = models.CharField(max_length=46)
 
@@ -19,4 +28,4 @@ class Gallery(models.Model):
     descripton = models.TextField()
     location = models.ForeignKey('location',on_delete=models.CASCADE)
     category = models.ForeignKey('categories',on_delete=models.CASCADE)
-    time_uloaded = models.DateTimeField(auto_now_add=True, null=True)   
+    time_uploaded = models.DateTimeField(auto_now_add=True, null=True)   
