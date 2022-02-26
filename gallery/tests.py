@@ -24,3 +24,11 @@ class categoriesTestCase(TestCase):
         self.fashion.update_category()
         category = categories.objects.all()
         self.assertTrue(categories)
+        
+class locationTestCase(TestCase):
+    def setup(self):
+        self.Kenya = location(name = 'Kenya')
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.Kenya,location))
+
