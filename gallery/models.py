@@ -52,7 +52,11 @@ class Gallery(models.Model):
             verbose_name = "Gallery"
             verbose_name_plural = "Galleries"
 
-    
+    @classmethod
+    def search_by_category(cls,search_term):
+        gallery = cls.objects.filter(category__name__icontains=search_term)
+
+        return gallery
     # def __str__(self):
     #     return self.name
     
