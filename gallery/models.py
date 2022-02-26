@@ -22,6 +22,15 @@ class location(models.Model):
     def __str__(self):
         return self.name
     
+    def save_location(self):
+        self.save()
+    
+    def update_location(self):
+        self.update()
+
+    def delete_location(self):
+        self.delete()
+    
 class Gallery(models.Model):
     image = models.ImageField(upload_to = 'photos/', null = True, blank = True)
     name = models.CharField(max_length=46)
