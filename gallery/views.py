@@ -6,7 +6,7 @@ def all_photos(request):
    
     return HttpResponse('This is my where all my images will be displayed. also the homepage')
 
-def photo_description(request, image_id):
+def photo_description(request):
     
     return HttpResponse('This is my image description view')
 
