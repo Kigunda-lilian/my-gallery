@@ -4,7 +4,7 @@ A Django based personal gallery , 25/02/2022.
 
 
 ## Description.
-This a web application that allows users to upload and display their images and other users can view all their photos and details based on the locations they were taken and search for the photos based on the category.Users also get to Copy a link to the photo to share with my friends.
+This a web application that allows users to upload and display their images and other users can view all their photos and details based on the locations they were taken and search for the photos based on the category.Users also get to Copy a link to the photo to share with friends.
 
 
 ## Live Link
@@ -22,23 +22,23 @@ Create a Pull Request
 
 
 ### Prerequisites
-Python 3.8
-Django 2.2
-Django-Bootstrap
-HTML
-CSS
-Postgressql
+* Python 3.8
+* Django 2.2
+* Django-Bootstrap
+* HTML
+* CSS
+* Postgressql
 
 
 ## Installing
 ### STARTING UP A DJANGO PROJECT
- python3 -m venv virtual
- source virtual/bin/activate
- pip install django==3.2.10 or pip install django==4.0.2 or  pip install django
-django-admin startproject <project name> .
-pip freeze >requirements.txt
-python3.8 manage.py runserver
-python3.8 manage.py startapp <app name>
+ * create a virtual environment- python3 -m venv virtual
+ * Activate the virtual environment- source virtual/bin/activate
+ * Install Django- pip install django==3.2.10 or pip install django==4.0.2 or  pip install django
+* Create a Django project-django-admin startproject <project name> .
+* create dependencies' file - pip freeze >requirements.txt
+* Run the project in localhost 8000- python3.8 manage.py runserver
+* create application- python3.8 manage.py startapp <app name>
 
 
 ## Running the tests
