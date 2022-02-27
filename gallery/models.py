@@ -44,8 +44,8 @@ class gallery(models.Model):
     name = models.CharField(max_length=46)
     descripton = models.TextField(max_length=500)
     # gallery_slug=models.SlugField(max_length=50)
-    location = models.ForeignKey('location',on_delete=models.CASCADE)
-    category = models.ForeignKey('categories',on_delete=models.CASCADE)
+    location = models.ForeignKey(location,on_delete=models.CASCADE)
+    category = models.ForeignKey(categories,on_delete=models.CASCADE)
     time_uploaded = models.DateTimeField(auto_now_add=True, null=True)
     
     # class meta:
