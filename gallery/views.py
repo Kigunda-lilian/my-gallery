@@ -10,10 +10,9 @@ def all_photos(request):
 
 
 def photo_description(request,Gallery_image_id):
-    try:
-      image = gallery.objects.get(id=Gallery_image_id)
-    except DoesNotExist:
-        raise Http404()
+    
+    image = gallery.objects.get(id=Gallery_image_id)
+    
     return render(request, 'images.html', {'image':image})
 
 def search_results(request):
