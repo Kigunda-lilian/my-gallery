@@ -1,15 +1,15 @@
-from tabnanny import verbose
+
 from unicodedata import category
 from django.db import models
 
 # Create your models here.
 class categories(models.Model):
-    categories_name = models.CharField(max_length=46)
+    name = models.CharField(max_length=46)
     # categories_slug=models.SlugField(max_length=50)
     
-    class meta:
-            verbose_name = "category"
-            verbose_name_plural = "categories"
+    # class meta:
+    #         verbose_name = "category"
+    #         verbose_name_plural = "categories"
 
     def __str__(self):
             return self.name
@@ -24,7 +24,7 @@ class categories(models.Model):
         self.delete()    
         
 class location(models.Model):
-    location_name = models.CharField(max_length=46)
+    name = models.CharField(max_length=46)
     # location_slug=models.SlugField(max_length=50)
 
     def __str__(self):
@@ -39,26 +39,26 @@ class location(models.Model):
     def delete_location(self):
         self.delete()
     
-class Gallery(models.Model):
-    Gallery_image = models.ImageField(upload_to = 'photos/', null = True, blank = True)
-    Gallery_name = models.CharField(max_length=46)
-    Gallery_descripton = models.TextField(max_length=500)
-    # Gallery_slug=models.SlugField(max_length=50)
+class gallery(models.Model):
+    image = models.ImageField(upload_to = 'photos/', null = True, blank = True)
+    name = models.CharField(max_length=46)
+    descripton = models.TextField(max_length=500)
+    # gallery_slug=models.SlugField(max_length=50)
     location = models.ForeignKey('location',on_delete=models.CASCADE)
     category = models.ForeignKey('categories',on_delete=models.CASCADE)
     time_uploaded = models.DateTimeField(auto_now_add=True, null=True)
     
-    class meta:
-            verbose_name = "Gallery"
-            verbose_name_plural = "Galleries"
+    # class meta:
+    #         verbose_name = "Gallery"
+    #         verbose_name_plural = "Galleries"
 
     @classmethod
     def search_by_category(cls,search_term):
         gallery = cls.objects.filter(category__name__icontains=search_term)
 
         return gallery
-    # def __str__(self):
-    #     return self.name
+    def __str__(self):
+        return self.name
     
     
     def save_image(self):

@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'galleriah.wsgi.application'
 DATABASES = {
     'default': {
          'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'gallery',
+        'NAME': 'ip1django',
         'USER': 'moringa',
         'PASSWORD':'1234',
         
