@@ -26,7 +26,7 @@ urlpatterns = [
     url(r'^photos/(\d+)', views.photo_description,name = 'photo'),
     url(r'^search/', views.search_results, name = 'search_results'),
     url(r'^profile/', views.profile, name = 'profile'),
-]
+]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 # if settings.DEBUG:
 #     urlpatterns
 

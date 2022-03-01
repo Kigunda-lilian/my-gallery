@@ -13,7 +13,7 @@ def photo_description(request,Gallery_image_id):
     
     image = gallery.objects.get(id=Gallery_image_id)
     
-    return render(request, 'images.html', {'image':image})
+    return render(request, 'index.html', {'image':image})
 
 def search_results(request):
     if 'images' in request.GET and request.GET["images"]:
